@@ -1,0 +1,18 @@
+Vue:
+
+vue file structure:
+
+
+export default{
+    data
+    mounted
+    methodss
+}
+
+v-bind
+
+v-for
+
+v-status
+
+v-

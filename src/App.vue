@@ -1,19 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import axios from "axios";
 
 export default {
-  name: 'App',
+  name: "Home",
+  data() {
+    return {};
+  },
+  mounted() {
+    this.getTasks();
+  },
+  methods: {
+    getTasks() {
+      axios({
+        method: "get",
+        url: "http://127.0.0.1:8000/tasks/",
+        auth: {
+          username: "tao",
+          password: "taotaotao",
+        },
+      }).then((response) => (this.tasks = response.data));
+    },
+  },
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+  },
+};
 </script>
 
 <style>
