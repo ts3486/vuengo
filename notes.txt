@@ -1,5 +1,11 @@
 Vue:
 
+////Characteristics: 
+
+Declarative Rendering: Vue extends standard HTML with a template syntax that allows us to declaratively describe HTML output based on JavaScript state.
+
+Reactivity: Vue automatically tracks JavaScript state changes and efficiently updates the DOM when changes happen.
+
 vue file structure:
 
 
@@ -16,3 +22,8 @@ v-for
 v-status
 
 v-
+
+
+
+vue best practices: 
+https://www.tatvasoft.com/blog/vue-js-best-practices/
