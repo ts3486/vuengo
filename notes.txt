@@ -23,7 +23,19 @@ v-status
 
 v-
 
+Vuex: 
 
+//dispatching actions to trigger mutations
+    getTodo(e) {
+      this.$store.dispatch("getTodo", e.target.value);
+    },
+  
+//getting data from store
+  computed: {
+    newTodo() {
+      return this.$store.getters.newTodo;
+    },
+  },
 
 vue best practices: 
 https://www.tatvasoft.com/blog/vue-js-best-practices/
